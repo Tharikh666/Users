@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "domain/user";
+
+service Users{
+
+    rpc Create (User) returns (Response){}
+    rpc GetAll (Empty) returns (stream User){}
+    rpc GetById (Identifier) returns (User){}
+    rpc Update (User) returns (Response){}
+    rpc Delete (Identifier) returns (Response){}
+ }
+
+ message User{
+
+    string Id =1;
+    string UserName =2;
+    string Password =3;
+    int32 Active =4;
+ }
+
+ message Identifier{
+
+    string Id =1;
+ }
+
+ message Response{
+
+    string Id =1;
+    bool Result =2;
+    string ResponseStatus =3;
+ }
+
+ message Empty{}

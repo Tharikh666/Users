@@ -1,0 +1,5 @@
+{
+    "ConnectionString"    : "postgresql://root@localhost:26257/USER?sslmode=disable",    
+    "ServerIP"            : "localhost",
+    "ServerPort"          : "8087"
+}

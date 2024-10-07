@@ -1,0 +1,14 @@
+-- public."user" definition
+
+-- Drop table
+
+-- DROP TABLE public."user";
+
+CREATE TABLE public."user" (
+	id INT8 NOT NULL DEFAULT unique_rowid(),
+	rowid INT8 NOT VISIBLE NOT NULL DEFAULT unique_rowid(),
+	username VARCHAR NOT NULL,
+	password VARCHAR NOT NULL,
+	active INT8 NOT NULL,
+	CONSTRAINT user_pk PRIMARY KEY (rowid ASC)
+);
